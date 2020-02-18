@@ -77,13 +77,13 @@
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
   &-text {
     margin-bottom: 55px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
   &-form {
@@ -98,7 +98,7 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       outline: none;
       padding-left: 25px;
       padding-right: 60px;
@@ -107,7 +107,7 @@
       }
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
     button {
@@ -149,7 +149,7 @@
 
 .product__item {
   margin-bottom: 30px;
-  font-weight: 500;
+  @include f500;
   background-color: #ffffff;
   max-width: 440px;
   width: 100%;
@@ -184,7 +184,9 @@
   }
 
   &-price {
-    font-weight: bold;
+    font-size: 20px;
+    color: $bg;
+    @include f700;
   }
 
   &-info {
@@ -213,7 +215,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
   }
   &-star {
@@ -224,7 +226,6 @@
   }
 
   &-star {
-    font-weight: 400;
     font-size: 12px;
     // display: flex;
     // align-items: center;
@@ -263,14 +264,15 @@
   padding: 100px 0px 120px;
   .slick-dots {
     text-align: center;
+    margin-top: 50px;
     li {
       display: inline-block;
       margin-left: 3px;
       margin-right: 3px;
       &.slick-active {
-          button {
-              background-color: $green;
-          }
+        button {
+          background-color: $green;
+        }
       }
       button {
         border-radius: 50%;
@@ -287,3 +289,85 @@
 }
 
 // end product-slider
+
+// start adventages
+
+.adventages {
+  background-color: $bg;
+  padding: 110px 0;
+  &__title {
+    color: #ffffff;
+    @include f500;
+    font-size: 24px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  &__item {
+    padding: 0px 15px;
+    max-width: 370px;
+    transition: all 0.5s;
+    &:hover {
+      .adventages__item {
+        &-img {
+          background-color: $green;
+          color: #ffffff;
+          svg {
+            g {
+              fill: #ffffff;
+            }
+          }
+        }
+        &-title {
+          color: $green;
+        }
+      }
+    }
+    &-img {
+      width: 115px;
+      height: 115px;
+      background-color: #ffffff;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+      img {
+        color: #ffffff;
+      }
+    }
+    &-title {
+      margin-bottom: 25px;
+      color: #ffffff;
+      @include f500;
+      font-size: 24px;
+      transition: all 0.5s;
+    }
+    &-text {
+      font-size: 15px;
+      color: #b0bec5;
+    }
+  }
+}
+
+.icosvg-1 {
+  svg {
+    width: 50px;
+  }
+}
+
+.icosvg-2 {
+  svg {
+    width: 70px;
+  }
+}
+
+.icosvg-3 {
+  svg {
+    width: 86px;
+  }
+}
+// end adventages
