@@ -383,7 +383,7 @@
   justify-content: center;
   align-items: center;
   &__box {
-      width: 100%;
+    width: 100%;
     max-width: 650px;
     min-height: 215px;
     background-color: $green;
@@ -392,26 +392,57 @@
     align-items: center;
   }
   &__title {
-      @include f400;
-      color: #ffffff;
-      font-size: 30px;
-      line-height: 30px;
-      margin-right: 45px;
-      max-width: 260px;
-      span {
-          @include f700
-      }
+    @include f400;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 45px;
+    max-width: 260px;
+    span {
+      @include f700;
+    }
   }
   &__link {
-      font-size: 18px;
-      line-height: 36px;
-      background-color: #ffffff;
-      padding: 14px 40px;
-      
-      
-     
-      &:hover {
-          opacity: 0.7;
-      }
+    font-size: 18px;
+    line-height: 36px;
+    background-color: #ffffff;
+    padding: 14px 40px;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
+
+// end author
+
+// start tutorial
+
+.tutorial {
+  padding: 70px 0px 120px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    &-img {
+      min-height: 270px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+    }
+    &-title {
+      font-size: 24px;
+      background-color: #f8f8f8;
+      text-align: center;
+      @include f700;
+      padding: 30px 10px;
+      color: $bg;
+    }
+  }
+}
+
+// end tutorial
